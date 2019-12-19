@@ -13,12 +13,8 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.100
-    - name: Run a one-line script
-      run: dotney-version 3.1.100 steup finised
     - name: Publish with dotnet
       run: dotnet publish --configuration Release --output build
-    - name: Run a one-line script
-      run: dotnet publish finished
     - name: Deploy to Github Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
@@ -27,5 +23,3 @@ jobs:
         BRANCH: gh-pages-from-actions # The branch the action should deploy to.
         FOLDER: build/Client/dist # The folder the action should deploy.
         CLEAN: true
-    - name: Run a one-line script
-      run: deployed to gh-pages-from-actions
